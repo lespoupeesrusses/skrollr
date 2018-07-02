@@ -1461,7 +1461,7 @@
 			name = names[nameCounter];
 
 			if(element.addEventListener) {
-				element.addEventListener(name, callback, false);
+				element.addEventListener(name, callback, { passive: false });
 			} else {
 				element.attachEvent('on' + name, intermediate);
 			}
